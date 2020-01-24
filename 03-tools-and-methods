@@ -1,7 +1,0 @@
----
- layout: default
- title: Title of page
- nav_order: 1
- ---
- 
- # Tools and methods
