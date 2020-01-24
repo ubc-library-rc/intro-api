@@ -4,5 +4,14 @@
  parent: Outline
  nav_order: 2
 ---
+# Types of APIs
 
- # Types of APIs
+* REST
+  * Web APIs that use the REST architecture are referred to as RESTful.
+
+* SOAP
+
+
+Client-library APIs
+
+For example: https://developers.google.com/calendar/downloads
