@@ -1,2 +1,4 @@
-# intro-apis
-Research Commons workshop "Introduction to APIs"
+ # Introduction to APIs
+ ### UBC Library Research Commonsitory_name/
+
+ Link to workshop: https://ubc-library-rc.github.io/intro-api
