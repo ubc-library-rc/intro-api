@@ -5,7 +5,7 @@ title: Outline
 has_children: true
 has_toc: false
 ---
-## Goal of this workshop
+# Goal of this workshop
 
 This workshop is intended to orient complete beginners to the Unix shell. By the end of the workshop, participants will be able to
 
