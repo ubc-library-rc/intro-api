@@ -1,7 +1,8 @@
 ---
  layout: default
  title: Working with APIs
- nav_order: 1
- ---
- 
+ parent: Outline
+ nav_order: 3
+---
+
  # Working with APIs
