@@ -1,7 +1,8 @@
 ---
  layout: default
- title: Title of page
+ title: Types of APIs
  nav_order: 2
  ---
  
+ # Types of APIs
  
