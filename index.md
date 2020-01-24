@@ -2,7 +2,7 @@
  layout: default
  title: Title of page
  nav_order: 1
- ---
+---
 ## Introduction to APIs
 
 This workshop is aimed at complete beginners. At the outcome of this workshop participants will be able to
