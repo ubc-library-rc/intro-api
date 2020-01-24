@@ -4,5 +4,6 @@
  parent: Outline
  nav_order: 3
 ---
+# Working with APIs
 
- # Working with APIs
+## Building a Query

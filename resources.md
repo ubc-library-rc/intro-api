@@ -3,7 +3,6 @@ layout: default
 title: Resources
 nav_order: 49
 ---
-
 # Resources
 
 ## Learn more about how APIs work
@@ -19,6 +18,6 @@ nav_order: 49
 
 ## Tools mentioned in this workshop
 
-OpenRefine
+* [OpenRefine](https://openrefine.org/)
 
 ## Additional activities and training

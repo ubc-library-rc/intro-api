@@ -4,5 +4,4 @@
  parent: Outline
  nav_order: 4
 ---
-
- # Activities
+# Activities
