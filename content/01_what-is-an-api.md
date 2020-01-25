@@ -18,3 +18,5 @@ You can think of an API as:
 
 * the waiter who works between a person ordering food at a restaurant and the cook
   * Andrew Park wrote a great description of this metaphor here https://tray.io/blog/how-do-apis-work
+
+# Building an API
