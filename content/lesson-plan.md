@@ -13,6 +13,6 @@ This workshop is intended to orient complete beginners to APIs. By the end of th
 
 | 0:00 | Setup and orientation |
 | 0:10  | What is an API? |     
-| 0:25  | Types of APIs and Working with APIs |
+| 0:25  | Working with APIs |
 | 0:45 | Hands-on Activities |
 | 1:20 | Next steps and Discussion |
