@@ -19,7 +19,6 @@ You can think of an API as:
 * the waiter who works between a person ordering food at a restaurant and the cook
   * Andrew Park wrote a great description of this metaphor here https://tray.io/blog/how-do-apis-work
 
-# Types of APIs
-
+## Types of APIs
 For this workshop we are only addressing one category of APIs which are referred to as "RESTful". RESTful APIs use the REST (Representational State Transfer) architecture which is essentially a series of procedures that help software applications communicate with each other. The REST architecture takes advantage of existing protocols on the web to communicate between applications and generally moves data in the JSON format. It is light and flexible compared to other similar architectures and commonly used for Open APIs on the web.
 
