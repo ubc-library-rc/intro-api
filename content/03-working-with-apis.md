@@ -40,7 +40,7 @@ http://numbersapi.com/1950/year?
 <br>
 
 Output
-{: .label .label-yellow }
+{: .label .label-yellow important! }
 ~~~
 1950 is the year that nothing remarkable happened.  
 (Or some equally pithy comment.)

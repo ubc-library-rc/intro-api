@@ -90,7 +90,7 @@ After doing this you should see a preview that is a bit more readable.
 ![Identify data](openrefine-weburl-preview.png)
 
 4. Select "Create Project" which processes the rest of the data and transforms the JSON into a tabular format. To view more records select "show 50" and you will end up with something like this:  
-![Identify data](oopenrefine-weburl-output.png)
+![Identify data](openrefine-weburl-output.png)
 
 From here you can keep working in OpenRefine or export the data.
 
