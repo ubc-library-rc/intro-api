@@ -50,7 +50,8 @@ This example returns an image instead of a JSON string (format=src) showing a ca
 ### Mix and match
 The [API documentation](https://docs.thecatapi.com/) lists the available query parameters and their acceptable values. Below are some examples you can experiment with.
 
-#### `categoy_ids` parameter
+#### *category_ids* parameter
+
 | category | parameter value
 | --- | ---
 | boxes | 5
@@ -60,10 +61,10 @@ The [API documentation](https://docs.thecatapi.com/) lists the available query p
 | hats | 1
 | kittens | 10
 
-#### `mime_types` parameter
+#### *mime_types* parameter
 Limits output to specified file type: jpg, png, or gif.
 
-#### `format` parameter
+#### *format* parameter
 Default output format is JSON, but setting this parameter to `src` displays the image itself.
 
 
