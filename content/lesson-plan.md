@@ -7,7 +7,7 @@ has_toc: false
 ---
 # Goal of this workshop
 
-This workshop is intended to orient complete beginners to APIs. By the end of the workshop, participants will be able to participants will be able to articulate what an API is, formulate an API query, and retrieve information through an API call.
+This workshop is intended to orient complete beginners to APIs. By the end of the workshop, participants will be able articulate what an API is, formulate an API query, and retrieve information through an API call.
 
 ## Schedule
 
