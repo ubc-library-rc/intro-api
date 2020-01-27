@@ -7,9 +7,7 @@
 # Activities
 
 ## 1. Querying The Cat API
-[TheCatAPI](https://thecatapi.com) is a free web API with information about cat breeds and a database of cat images. The API can be used to search the database, display cat images, upload new images, and tag your favorites.
-
-In this activity we'll use the API to return information about and display a series of cat images.
+[TheCatAPI](https://thecatapi.com) is a free web API with information about cat breeds and a database of cat images. The API can be used to search the database, display cat images, upload new images, and tag your favorites. In this activity we'll use the API to return information about and display a series of cat images.
 
 ### The basics: one random cat
 Open a new browser tab or window. Copy the URL below into the address bar and hit _enter_.
@@ -30,9 +28,43 @@ Output
 
 To view the image, copy the URL portion of the JSON string into the address bar, then hit _enter_.
 
-### Getting specific: using parameters
-That's quite a bit of work for one random cat image, but 
+### Getting specific: query parameters
+That's quite a bit of work for one random cat image but we can refine results with query parameters. Add a `?` to the end of the URL followed by one or more parameters in the format shown below. Note that each parameter is separated by a `&`.
 
+Input
+{: .label .label-green }
+```
+https://api.thecatapi.com/v1/images/search?breed_ids=rblu&limit=5
+```
+
+This will return a JSON string with information about five (limit=5) images of Russian Blue cats (breed_id=rblu).
+
+Input
+{: .label .label-green }
+```
+https://api.thecatapi.com/v1/images/search?category_ids=5&format=src
+```
+
+This example returns an image instead of a JSON string (format=src) showing a cat in the "boxes" category (category_ids=5).
+
+### Mix and match
+The [API documentation](https://docs.thecatapi.com/) lists the available query parameters and their acceptable values. Below are some examples you can experiment with.
+
+#### `categoy_ids` parameter
+| category | parameter value
+| --- | ---
+| boxes | 5
+| caturday | 6
+| clothes | 15
+| funny | 3
+| hats | 1
+| kittens | 10
+
+#### `mime_types` parameter
+Limits output to specified file type: jpg, png, or gif.
+
+#### `format` parameter
+Default output format is JSON, but setting this parameter to `src` displays the image itself.
 
 
 ## 2. Querying the Open Collections API
