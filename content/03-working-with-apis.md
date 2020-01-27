@@ -12,7 +12,7 @@ Generally an API is doing two things:
 * supporting communication between tools
 * controlling access to resources
 
-The way that access to resources is limited on the web is through authentication (where a tool wants to know who you are) and authorization (where a tool lets you do a certain thing). A common form of authentication that you are familiar with is username and password. Something you will run into when working with APIs is the concept of an "API key". An API key is like an identifier for your client that identifies you and, based on the type of key, authorizes you to do certain things. For example a "Public" API Key (one anyone can use without additional identification) might let you get a list of what is on a server but a "Registered" API Key (one where you had to provide more information about your identity) might let you get the full contents of what is on the server. The type of authorization you receive usually restricts the number of calls you can make within a certain amount of time to avoid overloading the server or blocking others from accessing it. 
+The way that access to resources is limited on the web is through authentication (where a tool wants to know who you are) and authorization (where a tool lets you do a certain thing). A common form of authentication that you are familiar with is username and password. Something you will run into when working with APIs is the concept of an "API key". An API key is like an identifier for your client that identifies you and, based on the type of key, authorizes you to do certain things. For example a "Public" API Key (one anyone can use without additional identification) might let you get a list of what is on a server but a "Registered" API Key (one where you had to provide more information about your identity) might let you get the full contents of what is on the server. The type of authorization you receive usually restricts the number of calls you can make within a certain amount of time to avoid overloading the server or blocking others from accessing it.
 
 ## Structure of a Query
 
@@ -38,13 +38,14 @@ http://numbersapi.com/1950/year?
 <details>
 <summary>Try entering http://numbersapi.com/1950/year? into a browser search bar. What output did you get?</summary>
 <br>
+
 Output
 {: .label .label-yellow }
 ~~~
-1950 is the year that nothing remarkable happened.
-
+1950 is the year that nothing remarkable happened.  
 (Or some equally pithy comment.)
 ~~~
+
 </details>
 
 If you want to further specify what you want to get out of the API, __Query parameters__ are added on using this structure:
