@@ -23,6 +23,6 @@ But you don't need to be a developer to benefit from APIs. They're also useful f
 
 Some people find it helpful to think of an API as a waiter taking and delivering orders in a restaurant. Andrew Park describes this metaphor [in his blog](https://tray.io/blog/how-do-apis-work):
 
-> Imagine you’re a customer at a restaurant. The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server). You tell the waiter your order (API call), and the waiter requests it from the kitchen. Finally, the waiter will provide you with what you ordered.
+> _Imagine you’re a customer at a restaurant. The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server). You tell the waiter your order (API call), and the waiter requests it from the kitchen. Finally, the waiter will provide you with what you ordered._
 
-> As a customer, you don’t need to know how the kitchen or the restaurant operates in order to get what you want: the food. You just need to know how to order it.
+> _As a customer, you don’t need to know how the kitchen or the restaurant operates in order to get what you want: the food. You just need to know how to order it._
