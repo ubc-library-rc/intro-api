@@ -6,19 +6,23 @@
 ---
 # What is an API?
 
-"API" stands for "Application Programming Interface" which is a set of procedures that help software applications communicate with each other.
+**API** stands for "Application Programming Interface". In the simplest terms an API is just a structured way for software applications to communicate with each other. An API provides access to certain services or data. When the application receives a specially formatted request - also referred to as an API _call_ - it responds by providing the requested service or data in a way that can be integrated into other applications or workflows.
 
-Most of the time APIs are aimed at developers who want to build an application that speaks to a piece of software. They are also a way for the creator of a tool to control how others are accessing what is in the tool.
+There are many kinds of APIs. In this workshop we will focus on web APIs, where the communication between applications happens via HTTP. In this type of API the calls are sent through a regular web browser and the details of each request are embedded in the URL.
 
-In the early days of computing APIs helped different pieces of software on the same computer talk to each other but they have since evolved to support communication over networks, between different computers.
+You may come across references to RESTful APIs. REST stands for "Representational State Transfer" and refers to a type of API architecture that is common in open web APIs like the ones introduced in this workshop.
+{: .note}
 
-## Useful metaphors
+## Why use APIs?
 
-You can think of an API as:
+APIs are often used by software developers to incorporate data or services into their own projects. Instead of building everything from scratch, developers use APIs to take advantage of services offered by other applications or platforms. For example, the Google Maps API makes it relatively easy to incorporate a custom map into your project - there's no need to draw a map from scratch.
 
-* the waiter who works between a person ordering food at a restaurant and the cook
-  * Andrew Park wrote a great description of this metaphor here https://tray.io/blog/how-do-apis-work
+But you don't need to be a developer to benefit from APIs. They're also useful for extracting data from applications or web services in a more flexible format. Take Google Analytics as an example. The Google Analytics website provides several dashboards designed to answer the most common questions about website activity. This is often helpful, but it can be frustrating when you need the information packaged differently than the website allows for. That's where an API can often help: using the Google Analytics API you can request the underlying raw data in a flexible format - usually JSON or XML - then use your own tools to explore or package it the way you need.
 
-## Types of APIs
-For this workshop we are only addressing one category of APIs which are referred to as "RESTful". RESTful APIs use the REST (Representational State Transfer) architecture which is essentially a series of procedures that help software applications communicate with each other. The REST architecture takes advantage of existing protocols on the web to communicate between applications and generally moves data in the JSON format. It is light and flexible compared to other similar architectures and commonly used for Open APIs on the web.
+##  The restaurant metaphor: API as waiter
 
+Some people find it helpful to think of an API as a waiter taking and delivering orders in a restaurant. Andrew Park describes this metaphor [in his blog](https://tray.io/blog/how-do-apis-work):
+
+> Imagine you’re a customer at a restaurant. The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server). You tell the waiter your order (API call), and the waiter requests it from the kitchen. Finally, the waiter will provide you with what you ordered.
+
+> As a customer, you don’t need to know how the kitchen or the restaurant operates in order to get what you want: the food. You just need to know how to order it.
