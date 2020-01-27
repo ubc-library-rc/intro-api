@@ -7,6 +7,33 @@
 # Activities
 
 ## 1. Querying The Cat API
+[TheCatAPI](https://thecatapi.com) is a free web API with information about cat breeds and a database of cat images. The API can be used to search the database, display cat images, upload new images, and tag your favorites.
+
+In this activity we'll use the API to return information about and display a series of cat images.
+
+### The basics: one random cat
+Open a new browser tab or window. Copy the URL below into the address bar and hit _enter_.
+
+Input
+{: .label .label-green }
+```
+https://api.thecatapi.com/v1/images/search
+```
+
+The API call returns a JSON string with information about one random entry in the cat image database. For example:
+
+Output
+{: .label .label-yellow }
+```
+[{"breeds":[],"id":"MTk1ODY2Mw","url":"https://cdn2.thecatapi.com/images/MTk1ODY2Mw.jpg","width":640,"height":480}]
+```
+
+To view the image, copy the URL portion of the JSON string into the address bar, then hit _enter_.
+
+### Getting specific: using parameters
+That's quite a bit of work for one random cat image, but 
+
+
 
 ## 2. Querying the Open Collections API
 The UBC Library's [Open Collections](https://open.library.ubc.ca/) has a robust open API which anyone can use though you do need to register an email address in order to make large or more involved requests.
