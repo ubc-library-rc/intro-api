@@ -1,10 +1,10 @@
 ---
  layout: default
- title: Next Steps
+ title: Calling an API wiht a script
  parent: Outline
  nav_order: 4
 ---
-# Next Steps: calling an API with a script
+# Calling an API with a script
 The examples we have touched on so far are fairly simple. Often when working with APIs we want to be able to get targeted information quickly and the most effective way to do this is through the use of additional tools like a script.
 
 ## Querying the Open Collections API
@@ -45,9 +45,9 @@ We are also going to follow the instructions in the [Open Collections documentat
 ![Select Python 3 for new Jupyter notebook](jupyter-python3-select.png)
 3. The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). You can take a look at this script in [Github here](https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py).
 
-<details>
-<summary>This script was originally written by Sean McNamara @Seanmcn for the UBC Library.</summary>
-<br>
+
+This script was originally written by Sean McNamara @Seanmcn for the UBC Library.
+
 ~~~ python
 import requests, math, json
 
@@ -89,7 +89,6 @@ for itemId in itemIds:
 print(json.dumps(items))
 ~~~
 
-</details>
 4. Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook,
 ![Paste script into Jupyter](paste-into-jupyter.png)
 and run the script.
