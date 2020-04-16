@@ -1,6 +1,6 @@
 ---
  layout: default
- title: Calling an API wiht a script
+ title: Calling an API with a script
  parent: Outline
  nav_order: 4
 ---
