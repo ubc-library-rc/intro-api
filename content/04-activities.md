@@ -1,74 +1,13 @@
 ---
  layout: default
- title: Activities
+ title: Next Steps
  parent: Outline
  nav_order: 4
 ---
-# Activities
+# Next Steps: calling an API with a script
+The examples we have touched on so far are fairly simple. Often when working with APIs we want to be able to get targeted information quickly and the most effective way to do this is through the use of additional tools like a script.
 
-## 1. Querying The Cat API
-[TheCatAPI](https://thecatapi.com) is a free web API with information about cat breeds and a database of cat images. The API can be used to search the database, display cat images, upload new images, and tag your favorites. In this activity we'll use the API to return information about and display a series of cat images.
-
-### The basics: one random cat
-Open a new browser tab or window. Copy the URL below into the address bar and hit _enter_.
-
-Input
-{: .label .label-green }
-```
-https://api.thecatapi.com/v1/images/search
-```
-
-The API call returns a JSON string with information about one random entry in the cat image database. For example:
-
-Output
-{: .label .label-yellow }
-```
-[{"breeds":[],"id":"MTk1ODY2Mw","url":"https://cdn2.thecatapi.com/images/MTk1ODY2Mw.jpg","width":640,"height":480}]
-```
-
-To view the image, copy the URL portion of the JSON string into the address bar, then hit _enter_.
-
-### Getting specific: query parameters
-That's quite a bit of work for one random cat image but we can refine results with query parameters. Add a `?` to the end of the URL followed by one or more parameters in the format shown below. Note that each parameter is separated by a `&`.
-
-Input
-{: .label .label-green }
-```
-https://api.thecatapi.com/v1/images/search?breed_ids=rblu&limit=5
-```
-
-This will return a JSON string with information about five (limit=5) images of Russian Blue cats (breed_id=rblu).
-
-Input
-{: .label .label-green }
-```
-https://api.thecatapi.com/v1/images/search?category_ids=5&format=src
-```
-
-This example returns an image instead of a JSON string (format=src) showing a cat in the "boxes" category (category_ids=5).
-
-### Mix and match
-The [API documentation](https://docs.thecatapi.com/) lists the available query parameters and their acceptable values. Below are some examples you can experiment with.
-
-#### *category_ids* parameter
-
-| category | parameter value
-| --- | ---
-| boxes | 5
-| caturday | 6
-| clothes | 15
-| funny | 3
-| hats | 1
-| kittens | 10
-
-#### *mime_types* parameter
-Limits output to specified file type: jpg, png, or gif.
-
-#### *format* parameter
-Default output format is JSON, but setting this parameter to `src` displays the image itself.
-
-
-## 2. Querying the Open Collections API
+## Querying the Open Collections API
 The UBC Library's [Open Collections](https://open.library.ubc.ca/) has a robust open API which anyone can use though you do need to register an email address in order to make large or more involved requests.
 
 Detailed documentation about the API is [available here](https://open.library.ubc.ca/docs).

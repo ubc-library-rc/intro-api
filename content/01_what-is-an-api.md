@@ -26,3 +26,13 @@ Some people find it helpful to think of an API as a waiter taking and delivering
 > _Imagine you’re a customer at a restaurant. The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server). You tell the waiter your order (API call), and the waiter requests it from the kitchen. Finally, the waiter will provide you with what you ordered._
 
 > _As a customer, you don’t need to know how the kitchen or the restaurant operates in order to get what you want: the food. You just need to know how to order it._
+
+# Working with RESTful APIs
+
+The REST architecture expects there to be a "__server__" and a "__client__". The server is where the data lives and the client is what makes the API call to the server. Communication can go both ways but generally writing data to a server is more restricted than getting data from a server.
+
+Generally an API is doing two things:
+* supporting communication between tools
+* controlling access to resources
+
+The way that access to resources is limited on the web is through authentication (where a tool wants to know who you are) and authorization (where a tool lets you do a certain thing). A common form of authentication that you are familiar with is username and password. Something you will run into when working with APIs is the concept of an "API key". An API key is like an identifier for your client that identifies you and, based on the type of key, authorizes you to do certain things. For example a "Public" API Key (one anyone can use without additional identification) might let you get a list of what is on a server but a "Registered" API Key (one where you had to provide more information about your identity) might let you get the full contents of what is on the server. The type of authorization you receive usually restricts the number of calls you can make within a certain amount of time to avoid overloading the server or blocking others from accessing it.
