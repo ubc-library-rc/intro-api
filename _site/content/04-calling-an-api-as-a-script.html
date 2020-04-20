@@ -1,0 +1,115 @@
+<h1 id="calling-an-api-with-a-script">Calling an API with a script</h1>
+<p>The examples we have touched on so far are fairly simple. Often when working with APIs we want to be able to get targeted information quickly and the most effective way to do this is through the use of additional tools like a script.</p>
+
+<h2 id="querying-the-open-collections-api">Querying the Open Collections API</h2>
+<p>The UBC Library’s <a href="https://open.library.ubc.ca/">Open Collections</a> has a robust open API which anyone can use though you do need to register an email address in order to make large or more involved requests.</p>
+
+<p>Detailed documentation about the API is <a href="https://open.library.ubc.ca/docs">available here</a>.</p>
+
+<h3 id="21-through-openrefine">2.1 Through OpenRefine</h3>
+<p>A quick and easy way to get data from an API endpoint is through the “Web Addresses (URLs)” function in OpenRefine. All you need to make use of this is a well structured query with the parameters that you want to get.</p>
+
+<p>We will be using a common example in the UBC Library Open Collections documentation: <a href="https://oc2-index.library.ubc.ca/collections/arkley/items">https://oc2-index.library.ubc.ca/collections/arkley/items</a>. This query returns a list of all of the items in the Arkley Croquet collection.</p>
+
+<ol>
+  <li>
+    <p>First try pasting the query into a browser window to see whether any errors come up. This is a quick and easy way to check that your query is well structured.</p>
+  </li>
+  <li>
+    <p>Open OpenRefine and paste your query string into the “Web Addresses (URLs)” option under “Get data from”.
+<img src="openrefine-weburl-paste-query.png" alt="Paste query into OpenRefine" /></p>
+  </li>
+  <li>
+    <p>OpenRefine will ask you to identify what you want out of the data.
+<img src="openrefine-weburl-id-data.png" alt="Identify data" /></p>
+  </li>
+</ol>
+
+<p>After doing this you should see a preview that is a bit more readable.
+<img src="openrefine-weburl-preview.png" alt="Identify data" /></p>
+
+<ol>
+  <li>Select “Create Project” which processes the rest of the data and transforms the JSON into a tabular format. To view more records select “show 50” and you will end up with something like this:<br />
+<img src="openrefine-weburl-output.png" alt="Identify data" /></li>
+</ol>
+
+<p>From here you can keep working in OpenRefine or export the data.</p>
+
+<h3 id="22-through-a-python-script">2.2 Through a Python script</h3>
+
+<p>For this activity we will be working in <a href="https://ubc.syzygy.ca/">UBC Syzygy</a>. Syzygy is a collection of research tools that are accessible through a web browser. One of these tools is “Jupyter” which is an electronic notebook that lets you run scripts in common programming languages and see the output immediately with no additional installation or setup required.</p>
+
+<p>We are also going to follow the instructions in the <a href="https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py">Open Collections documentation</a>. You do not need to read the full documentation to complete this activity but we encourage you to explore it if you are interested in learning more about what’s possible with the Open Collections API.</p>
+
+<ol>
+  <li>Please log in to <a href="https://ubc.syzygy.ca/">UBC Syzygy here</a>. Click on the red house and log in via UBC CWL.
+<img src="syzygy-login.png" alt="Log in to Syzygy" /></li>
+  <li>In the upper right hand side of the page select “New” and then “Python 3” from the dropdown.
+<img src="jupyter-python3-select.png" alt="Select Python 3 for new Jupyter notebook" /></li>
+  <li>The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). You can take a look at this script in <a href="https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py">Github here</a>.</li>
+</ol>
+
+<p>This script was originally written by Sean McNamara @Seanmcn for the UBC Library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span><span class="p">,</span> <span class="n">math</span><span class="p">,</span> <span class="n">json</span>
+
+<span class="n">ocApiUrl</span> <span class="o">=</span> <span class="s">'https://oc-index.library.ubc.ca'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'ac40e6c2cb345593ed1691e0a8b601bba398e42d85f81f893c5ab709cec63c6c'</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="s">'darwin'</span>
+<span class="n">perPage</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Query the API for the collection item count
+</span><span class="n">collectionUrl</span> <span class="o">=</span> <span class="n">ocApiUrl</span> <span class="o">+</span> <span class="s">'/collections/'</span> <span class="o">+</span> <span class="n">collection</span> <span class="o">+</span> <span class="s">'?api_key='</span> <span class="o">+</span> <span class="n">apiKey</span>
+<span class="n">apiResponse</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">collectionUrl</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">itemCount</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">apiResponse</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="s">'items'</span><span class="p">])</span>
+
+<span class="c1"># Figure out how many pages there are
+</span><span class="n">pages</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">itemCount</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">perPage</span><span class="p">)))</span>
+
+<span class="c1"># Loop through collection item pages to get all items
+</span><span class="n">itemIds</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pages</span><span class="p">):</span>
+    <span class="n">collectionItemsUrl</span> <span class="o">=</span> <span class="n">ocApiUrl</span> <span class="o">+</span> <span class="s">'/collections/'</span> <span class="o">+</span> <span class="n">collection</span>
+    <span class="n">collectionItemsUrl</span> <span class="o">+=</span> <span class="s">'/items?limit='</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">perPage</span><span class="p">)</span> <span class="o">+</span> <span class="s">'&amp;offset='</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span> <span class="o">+</span> <span class="s">'&amp;api_key='</span> <span class="o">+</span> <span class="n">apiKey</span>
+    <span class="n">offset</span> <span class="o">+=</span> <span class="mi">25</span>
+    <span class="c1"># Get list of 25 items
+</span>    <span class="n">apiResponse</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">collectionItemsUrl</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">collectionItems</span> <span class="o">=</span> <span class="n">apiResponse</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span>
+    <span class="c1"># Add each item id to the itemIds list
+</span>    <span class="k">for</span> <span class="n">collectionItem</span> <span class="ow">in</span> <span class="n">collectionItems</span><span class="p">:</span>
+        <span class="n">itemIds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">collectionItem</span><span class="p">[</span><span class="s">'_id'</span><span class="p">])</span>
+
+<span class="c1"># Store all the items so we can print them out later
+</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">itemId</span> <span class="ow">in</span> <span class="n">itemIds</span><span class="p">:</span>
+    <span class="n">itemUrl</span> <span class="o">=</span> <span class="n">ocApiUrl</span> <span class="o">+</span> <span class="s">'/collections/'</span> <span class="o">+</span> <span class="n">collection</span> <span class="o">+</span> <span class="s">'/items/'</span> <span class="o">+</span> <span class="n">itemId</span>
+    <span class="n">apiResponse</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">itemUrl</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="n">apiResponse</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span>
+    <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook,
+<img src="paste-into-jupyter.png" alt="Paste script into Jupyter" />
+and run the script.
+<img src="run-jupyter.png" alt="Run in Jupyter" /></p>
+  </li>
+  <li>
+    <p>After a few moments you will see the output of your API call in the Jupyter notebook. At this stage your output is in JSON format.
+<img src="output-in-jupyter.png" alt="Jupyter output" />. As a final step, let’s turn this into tabular data through Open Refine.</p>
+  </li>
+  <li>
+    <p>Select all of our JSON output in the Jupyter notebook. A quick way to do this for a small amount of data is to select the beginning of our output, hold “Shift” and then select the end. CMD+C or CTRL+C to copy. Open OpenRefine and paste your copied output into the OpenRefine “clipboard” input.
+<img src="paste-into-openrefine.png" alt="Paste into OpenRefine" /></p>
+  </li>
+</ol>
+
+<p>After selecting “Next” OpenRefine will ask you to explain the data to it a bit. For this exercise you need to tell it where the data begins that you want to see in a tabular format.
+<img src="openrefine-id-data.png" alt="Identify data" /></p>
+
+<p>From here you can keep working with the data in OpenRefine or you can export it into a more familiar format to work with in another tool such as Excel.
+!(Export data](export-to-csv.png)</p>

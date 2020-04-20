@@ -1,0 +1,31 @@
+I"Õ<h1 id="goal-of-this-workshop">Goal of this workshop</h1>
+
+<p>This workshop is intended to orient complete beginners to APIs. By the end of the workshop, participants will be able articulate what an API is, formulate an API query, and retrieve information through an API call.</p>
+
+<h2 id="schedule">Schedule</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>0:00</td>
+      <td>Setup and orientation</td>
+    </tr>
+    <tr>
+      <td>0:10</td>
+      <td>What is an API?</td>
+    </tr>
+    <tr>
+      <td>0:25</td>
+      <td>Working with APIs</td>
+    </tr>
+    <tr>
+      <td>0:45</td>
+      <td>Hands-on Activities</td>
+    </tr>
+    <tr>
+      <td>1:20</td>
+      <td>Next steps and Discussion</td>
+    </tr>
+  </tbody>
+</table>
+:ET

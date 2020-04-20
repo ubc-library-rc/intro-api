@@ -1,0 +1,101 @@
+I"e<h2 id="structure-of-a-query">Structure of a Query</h2>
+
+<p>A query has a few core components:</p>
+<ul>
+  <li><strong>endpoint</strong></li>
+  <li><strong>path</strong></li>
+  <li><strong>query parameters</strong></li>
+</ul>
+
+<p>Every API has an <strong>endpoint</strong> which is like providing an address to the server. This is the first piece of information REST expects you to have. For example, if you wanted to get data from the Numbers API (which serves trivia about numbers) through an API call, the endpoint would be: http://numbersapi.com.</p>
+
+<p>The <strong>path</strong> tells the server which data you are most interested in and <strong>query parameters</strong> are a way to further specify what you want. Query parameters are not a part of the REST architecture but are commonly used.</p>
+
+<p>If you want to further specify what you want to get out of the API, <strong>Query parameters</strong> are added on using this structure:</p>
+
+<p>The symbol “?” indicates the end of the path and the beginning of the <strong>query parameters</strong>.</p>
+
+<p>A path doesn’t have to lead to only one thing. It’s also possible to batch your requests by indicating that you are interested in more than one path. For the Numbers API this means you might be interested in facts about multiple numbers.</p>
+
+<p>This is just the tip of the iceberg! A lot more is possible with APIs and we will touch on next steps through our activities.</p>
+
+<h2 id="case-study-querying-the-cat-api">Case study: Querying The Cat API</h2>
+
+<p><a href="https://thecatapi.com">TheCatAPI</a> is a free web API with information about cat breeds and a database of cat images. The API can be used to search the database, display cat images, upload new images, and tag your favorites. In this activity we’ll use the API to return information about and display a series of cat images.</p>
+
+<h3 id="the-basics-one-random-cat">The basics: one random cat</h3>
+<p>Open a new browser tab or window. Copy the URL below into the address bar and hit <em>enter</em>.</p>
+
+<p class="label label-green">Input</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.thecatapi.com/v1/images/search
+</code></pre></div></div>
+
+<p>The API call returns a JSON string with information about one random entry in the cat image database. For example:</p>
+
+<p class="label label-yellow">Output</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[{"breeds":[],"id":"MTk1ODY2Mw","url":"https://cdn2.thecatapi.com/images/MTk1ODY2Mw.jpg","width":640,"height":480}]
+</code></pre></div></div>
+
+<p>To view the image, copy the URL portion of the JSON string into the address bar, then hit <em>enter</em>.</p>
+
+<h3 id="getting-specific-query-parameters">Getting specific: query parameters</h3>
+<p>That’s quite a bit of work for one random cat image but we can refine results with query parameters. Add a <code class="highlighter-rouge">?</code> to the end of the URL followed by one or more parameters in the format shown below. Note that each parameter is separated by a <code class="highlighter-rouge">&amp;</code>.</p>
+
+<p class="label label-green">Input</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.thecatapi.com/v1/images/search?breed_ids=rblu&amp;limit=5
+</code></pre></div></div>
+
+<p>This will return a JSON string with information about five (limit=5) images of Russian Blue cats (breed_id=rblu).</p>
+
+<p class="label label-green">Input</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.thecatapi.com/v1/images/search?category_ids=5&amp;format=src
+</code></pre></div></div>
+
+<p>This example returns an image instead of a JSON string (format=src) showing a cat in the “boxes” category (category_ids=5).</p>
+
+<h3 id="mix-and-match">Mix and match</h3>
+<p>The <a href="https://docs.thecatapi.com/">API documentation</a> lists the available query parameters and their acceptable values. Below are some examples you can experiment with.</p>
+
+<h4 id="category_ids-parameter"><em>category_ids</em> parameter</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>category</th>
+      <th>parameter value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>boxes</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>caturday</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>clothes</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>funny</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>hats</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>kittens</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="mime_types-parameter"><em>mime_types</em> parameter</h4>
+<p>Limits output to specified file type: jpg, png, or gif.</p>
+
+<h4 id="format-parameter"><em>format</em> parameter</h4>
+<p>Default output format is JSON, but setting this parameter to <code class="highlighter-rouge">src</code> displays the image itself.</p>
+:ET
