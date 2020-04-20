@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to APIs - What is an API?</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/ubc.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <h2>What is an API?</h2>
+        </section>
+
+
+				<section data-background="#e6f7ff">
+					<h3>A way to extract information from websites</h3>
+					<p class="fragment">
+					Acquire non-tabular or poorly structured data from a site and convert it to a structured format (.csv, spreadsheet)
+					</p>
+				</section>
+
+				<section>
+
+					<img width="550" height="230" data-src="../content/media/the_general_problem.png" alt="The promise of automation">
+					<p style="font-size: smaller;">Source: <a href="https://xkcd.com/974/">https://xkcd.com/974/</a></p>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Automate web data retrieval</h3>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">identify sites to visit</li>
+						<li class="fragment fade-in-then-semi-out">define information to look for</li><li class="fragment fade-in-then-semi-out">set how far to go</li>
+						<li class="fragment fade-in-then-semi-out">set scraping frequency</li>
+				</ul>
+			</section>
+
+				<section>
+					<h3> Scraping vs crawling</h3>
+					<p class="fragment"><b>Crawling</b>. What Google does to index the web - systematically "crawling" through all content on specified sites.</p>
+					<p class="fragment"><b>Scraping</b>. More targeted than crawling - identifies and extracts specific content from pages it accesses.</p>
+
+				</section>
+
+				<section>
+					<p>Some sites disallow web scraping with a robots.txt file.</p>
+					<img width="600" height="219" data-src="../content/media/robotstxt.png" alt="robots.txt comic">
+					<p style="font-size: smaller;">Source: <a href="http://locomostrip.com/comic/179/">http://locomostrip.com/comic/179/</a></p>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Is scraping the best option?</h3>
+					<ul class="fragment">
+						<li>is it easy to copy/paste?</li>
+						<li>does the site provide an export option?</li>
+						<li>is there an API?</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h3>Ethics and considerations</h3>
+				</section>
+				<section>
+						<p>Am I allowed to take this data?</p>
+						<p class="fragment" style="color:grey">Check the website for <em>terms of use</em> that affect web scraping.</p>
+					</section>
+					<section>
+						<p>Are there restrictions on what I can do with this data?</p>
+						<p class="fragment" style="color:grey">Making a local copy of publicly available data is usually OK, but there may be limits on use and redistribution (check for <em>copyright</em> statements).</p>
+					</section>
+					<section>
+
+						<p>Am I overloading the website's servers?</p>
+					<p class="fragment" style="color:grey">Scraping practice should respect the website's access rules, often encoded in <em>robots.txt</em> files.</p>
+				</section>
+						<section data-background="#e6f7ff">
+						<p>When in doubt ask a librarian or contact UBC's Copyright Office<br/><a href="https://copyright.ubc.ca/support/contact-us/">https://copyright.ubc.ca/support/contact-us/</a></p>
+
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
