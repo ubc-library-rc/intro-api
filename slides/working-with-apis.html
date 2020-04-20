@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
+		<!-- Theme used for syntax stronging of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
 		<!-- Printing and PDF exports -->
@@ -26,9 +26,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-          <h2>A query has a few core components:</h2>
+          <h3>A query has a few core components:</h3>
           <li>
-            <ul>endpoint<ul>
+            <ul>endpoint</ul>
             <ul>path</ul>
             <ul>query parameters</ul>
           </li>
@@ -36,33 +36,33 @@
         <section>
           <h2>A query has a few core components:</h2>
           <li>
-            <ul><highlight>endpoint</highlight><ul>
+            <ul><strong>endpoint</strong></ul>
             <ul>path</ul>
             <ul>query parameters</ul>
           </li>
-          <p><highlight>https://api.thecatapi.com</highlight>/v1/images/search?category_ids=5&format=src</p>
+          <p><strong>https://api.thecatapi.com</strong>/v1/images/search?category_ids=5&format=src</p>
         </section>
         <section>
           <h2>A query has a few core components:</h2>
           <li>
-            <ul>endpoint<ul>
-            <ul><highlight>path</highlight></ul>
+            <ul>endpoint</ul>
+            <ul><strong>path</strong></ul>
             <ul>query parameters</ul>
           </li>
-          <p>https://api.thecatapi.com/<highlight>v1/images/search</highlight>?category_ids=5&format=src</p>
+          <p>https://api.thecatapi.com/<strong>v1/images/search</strong>?category_ids=5&format=src</p>
        </section>
         <section>
           <h2>A query has a few core components:</h2>
           <li>
-            <ul>endpoint<ul>
+            <ul>endpoint</ul>
             <ul>path</ul>
-            <ul><highlight>query parameters</highlight></ul>
+            <ul><strong>query parameters</strong></ul>
           </li>
-          <p>https://api.thecatapi.com/v1/images/search<highlight>?category_ids=5&format=src</highlight></p>
+          <p>https://api.thecatapi.com/v1/images/search<strong>?category_ids=5&format=src</strong></p>
         </section>
 				<section>
-          <h1>TheCatAPI</h1>
-          <h2>https://api.thecatapi.com/</h2>
+          <p><strong>TheCatAPI</strong></p>
+          <p>https://api.thecatapi.com/</p>
         </section>
 
 			</div>
@@ -79,7 +79,7 @@
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/strong/strong.js' },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
