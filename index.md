@@ -1,23 +1,31 @@
 ---
- layout: default
- title: Setup
- nav_order: 1
+layout: default
+nav_order: 2
+title: Outline
+has_children: true
+has_toc: false
 ---
-## Introduction to APIs
+# Introduction to apis
 
-This workshop is aimed at complete beginners. At the outcome of this workshop participants will be able to
-articulate what an API is, formulate an API query, and retrieve information through an API call.
+## Goals
 
-### Overview
+This workshop is intended to orient complete beginners to APIs. By the end of the workshop participants will be able to:
 
-1. Introduction and definitions
-2. Overview of tools
-3. Hands-on activities
+- articulate what an API is
+- formulate an API query
+- retrieve information through an API call
+
+## Schedule
+
+| 0:00 | Setup and introductions |
+| 0:05  | What is an API? |     
+| 0:25  | Working with APIs |
+| 0:45 | Calling an API with a script |
+| 1:00 | Activities |
+
 
 ### Setup
 
-Before the workshop, please install [Open Refine](https://openrefine.org/){:target="_blank"}
-
-Please bring a *fully charged* laptop to this workshop.
+Before the workshop, please install [Open Refine](https://openrefine.org/download.html){:target="_blank"}
 
 If you need help please get in touch at [eka.grguric@ubc.ca](mailto:eka.grguric@ubc.ca) or [jeremy.buhler@ubc.ca](mailto:jeremy.buhler@ubc.ca).
