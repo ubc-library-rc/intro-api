@@ -11,7 +11,7 @@ nav_order: 49
 * Allamaraju, S., & O'Reilly for Higher Education. (2010). RESTful web services cookbook (1st;1; ed.). Beijing;Sebastopol,CA;: O'Reilly. [http://tinyurl.com/stu43gx](http://tinyurl.com/stu43gx)
 
 __Quick reads:__
-* Smashing Magazine. (2020). Understanding And Using REST APIs — Smashing Magazine. [online] Available at: https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/.
+* Smashing Magazine. (2020). Understanding And Using REST APIs — Smashing Magazine. [online] Available at: [https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
 ## APIs mentioned in this workshop
 
