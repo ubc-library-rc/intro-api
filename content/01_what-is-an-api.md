@@ -6,18 +6,21 @@
 ---
 # What is an API?
 
-**API** stands for "Application Programming Interface". In the simplest terms an API is just a structured way for software applications to communicate with each other. An API provides access to certain services or data. When the application receives a specially formatted request - also referred to as an API _call_ - it responds by providing the requested service or data in a way that can be integrated into other applications or workflows.
+<em><a href="../slides/what-is-an-api.html" target="_blank">View slides</a> for this section</em>
 
-There are many kinds of APIs. In this workshop we will focus on web APIs, where the communication between applications happens via HTTP. In this type of API the calls are sent through a regular web browser and the details of each request are embedded in the URL.
+**API** stands for "Application Programming Interface". In the simplest terms an API is just a structured way for software applications to communicate with each other.
 
-You may come across references to RESTful APIs. REST stands for "Representational State Transfer" and refers to a type of API architecture that is common in open web APIs like the ones introduced in this workshop.
-{: .note}
+An API can give you access to the services or data available from another software application. When the application receives a specially formatted request -  referred to as an API _call_ - it responds by providing the requested service or data in a way that can be integrated into other applications or workflows.
 
 ## Why use APIs?
+APIs are often used by software developers to enhance their own projects. Instead of building everything from scratch developers can use APIs to take advantage of services offered by other applications. For example, the Google Maps API makes it relatively easy to incorporate an interactive map into your project - there's no need to create your own.
 
-APIs are often used by software developers to incorporate data or services into their own projects. Instead of building everything from scratch, developers use APIs to take advantage of services offered by other applications or platforms. For example, the Google Maps API makes it relatively easy to incorporate a custom map into your project - there's no need to draw a map from scratch.
+<iframe width="400" height="300" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/view?zoom=11&center=49.2827,-123.1207&key=AIzaSyDYl5y6Sq0XKodDmTDWuKV1VYMLcMmT_QM" allowfullscreen></iframe>
 
-But you don't need to be a developer to benefit from APIs. They're also useful for extracting data from applications or web services in a more flexible format. Take Google Analytics as an example. The Google Analytics website provides several dashboards designed to answer the most common questions about website activity. This is often helpful, but it can be frustrating when you need the information packaged differently than the website allows for. That's where an API can often help: using the Google Analytics API you can request the underlying raw data in a flexible format - usually JSON or XML - then use your own tools to explore or package it the way you need.
+But you don't need to be a developer to benefit from APIs. They're also useful for extracting data from web services in a structured format. Take Google Analytics as an example. The Google Analytics website provides several dashboards designed to answer the most common questions about website activity. This is often helpful, but it can be frustrating when you need the data packaged differently than the website allows for. That's where an API can often help: using the Google Analytics API you can request the underlying data in a flexible format - usually JSON or XML - then use your own tools to explore or package it the way you need to.
+
+From the service provider side of things, APIs provide a way to control and monitor access to their resources. As we'll see a bit later, APIs often require you authenticate with an _API key_.
 
 ##  The restaurant metaphor: API as waiter
 
@@ -27,17 +30,21 @@ Some people find it helpful to think of an API as a waiter taking and delivering
 
 > _As a customer, you don’t need to know how the kitchen or the restaurant operates in order to get what you want: the food. You just need to know how to order it._
 
-## Working with RESTful APIs
+That last sentence - *you just need to know how to order it* - is important to remember. Though APIs for different services have a common structure, each will have its own options. You will need to read a particular API's documentation to understand what is available and get results.
+
+## RESTful APIs
+There are many kinds of APIs. In this workshop we focus on RESTful APIs, where the communication between applications happens via HTTP and often using a browser.
+
+**REST** stands for "Representational State Transfer," referring to an architecture common in web APIs. In RESTful APIs, calls are sent through a browser and the details of each request are embedded in the URL.
+{: .note}
 
 The REST architecture expects there to be a "__server__" and a "__client__". The server is where the data lives and the client is what makes the API call to the server. Communication can go both ways but generally writing data to a server is more restricted than getting data from a server.
 
+## Authentication and API keys
 Generally an API is doing two things:
 * supporting communication between tools
 * controlling access to resources
 
-## Authentication and authorization
-The way that access to resources is limited on the web is through __authentication__ (identifying who you are) and __authorization__ (whether you are allowed to access a particular resource). A common form of authentication is username and password. Something you will run into when working with APIs is the concept of an "API key". An API key is like an identifier for your client that identifies you and, based on the type of key, authorizes you to do certain things.
+The way APIs control access to resources is through __authentication__ (identifying who you are) and __authorization__ (determining what you're allowed to access). You're already familiar with a common form of authentication, the username and password. Another form of authentication used with APIs is the **API key**. An API key is an identifier embedded in your API calls that identifies you and determines what you're authorized to access from the server.
 
-For example a "Public" API Key (one anyone can use without additional identification) might let you get a list of what is on a server, but a "Registered" API Key (one where you had to provide more information about your identity) might let you get the full contents of what is on the server. The type of authorization you receive usually determines the number of calls you can make within a certain amount of time, to avoid overloading the server or blocking others from accessing it.
-
-## API Documentation
+There are different types of API keys. A **public** API key is one that anyone can use without additional identification. Public keys often provide limited access to the server's resources. A public key might let you get a _list_ of what is on a server, for example, but to access the full contents you may need to provide more information about your identity and get a **registered** API key. The type of key usually determines the number of calls you can make within a certain amount of time, to avoid overloading the server or blocking others from accessing it.

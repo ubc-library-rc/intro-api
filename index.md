@@ -5,7 +5,7 @@ title: Outline
 has_children: true
 has_toc: false
 ---
-# Introduction to apis
+# Introduction to APIs
 
 ## Goals
 
@@ -15,6 +15,8 @@ This workshop is intended to orient complete beginners to APIs. By the end of th
 - formulate an API query
 - retrieve information through an API call
 
+To make the most of the workshop activities please install [Open Refine](https://openrefine.org/download.html){:target="_blank"} ahead of time.
+
 ## Schedule
 
 | 0:00 | Setup and introductions |
@@ -22,10 +24,5 @@ This workshop is intended to orient complete beginners to APIs. By the end of th
 | 0:25  | Working with APIs |
 | 0:45 | Calling an API with a script |
 | 1:00 | Activities |
-
-
-### Setup
-
-Before the workshop, please install [Open Refine](https://openrefine.org/download.html){:target="_blank"}
 
 If you need help please get in touch at [eka.grguric@ubc.ca](mailto:eka.grguric@ubc.ca) or [jeremy.buhler@ubc.ca](mailto:jeremy.buhler@ubc.ca).
