@@ -24,5 +24,3 @@ __Quick reads:__
 ## Tools mentioned in this workshop
 
 * [OpenRefine](https://openrefine.org/)
-
-## Additional activities and training
