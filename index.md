@@ -15,6 +15,7 @@ This workshop is intended to orient complete beginners to APIs. By the end of th
 - formulate an API query
 - retrieve information through an API call
 
+## Setup
 To make the most of the workshop activities please install [Open Refine](https://openrefine.org/download.html){:target="_blank"} ahead of time.
 
 ## Schedule

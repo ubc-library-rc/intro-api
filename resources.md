@@ -19,7 +19,7 @@ __Quick reads:__
 * [Numbers API](http://numbersapi.com)
 * [The Cat API](https://thecatapi.com/)
 * [Google APIs Explorer](https://developers.google.com/apis-explorer)
-* [Nasa APIs](https://api.nasa.gov/)
+* [NASA APIs](https://api.nasa.gov/)
 
 ## Tools mentioned in this workshop
 
