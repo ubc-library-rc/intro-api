@@ -15,7 +15,7 @@ Detailed documentation about the API is [available here](https://open.library.ub
 ### 2.1 Through OpenRefine
 A quick and easy way to get data from an API endpoint is through the "Web Addresses (URLs)" function in OpenRefine. All you need to make use of this is a well structured query with the parameters that you want to get.
 
-We will be using a common example in the UBC Library Open Collections documentation: [https://oc2-index.library.ubc.ca/collections/arkley/items](https://oc2-index.library.ubc.ca/collections/arkley/items). This query returns a list of all of the items in the Arkley Croquet collection.
+We will be using a common example in the UBC Library Open Collections documentation: [https://oc2-index.library.ubc.ca/collections/darwin/items](https://oc2-index.library.ubc.ca/collections/darwin/items). This query returns a list of all of the items in the Darwin collection.
 
 1. First try pasting the query into a browser window to see whether any errors come up. This is a quick and easy way to check that your query is well structured.
 
@@ -43,7 +43,7 @@ We are also going to follow the instructions in the [Open Collections documentat
 ![Log in to Syzygy](syzygy-login.png)
 2. In the upper right hand side of the page select "New" and then "Python 3" from the dropdown.
 ![Select Python 3 for new Jupyter notebook](jupyter-python3-select.png)
-3. The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). You can take a look at this script in [Github here](https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py).
+3. The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). The script is included below but you can also take a look at it in [Github here](https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py).
 
 
 This script was originally written by Sean McNamara @Seanmcn for the UBC Library.
