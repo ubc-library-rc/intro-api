@@ -29,42 +29,40 @@
 			<h2>Working with APIs</h2>
 		</section>
 			<section data-markdown>
-				<textarea data-template>
+			<textarea data-template>
 			A query has a few core components:
-			* endpoint
-			* path
-			* query parameters
+			<span class="fragment">* endpoint</span>
+	  	<span class="fragment">* path</span>
+			<span class="fragment">* query parameters</span>
 		</textarea>
 		</section>
 
 		<section data-markdown>
 			<textarea data-template>
-			* <strong>endpoint</strong>
-			* path
-			* query parameters
+			<strong>endpoint</strong>
+			* represent where a resource lives
+			* the first part of a query phrase
 
-
-	<strong>[api.thecatapi.com/]()</strong> [v1/images/search?category_ids=5&format=src]()
+			Example: https://api.thecatapi.com/
 		</textarea>
 	</section>
 	<section data-markdown>
 		<textarea data-template>
-			* endpoint
-			* <strong>path</strong>
-			* query parameters
+			<strong>path</strong>
+			* further specifies what part of the resource you want
+			* there's no rule to how the terms or order used (each resource is different) but there are conventions
 
-
-		 [https://api.thecatapi.com/]()<strong>[v1/images/search]()</strong> []?category_ids=5&format=src]()
+			Example: https://api.thecatapi.com/v1/images/search
 </textarea>
 	 </section>
 	 <section data-markdown>
 		 <textarea data-template>
-			* endpoint
-			* path
-			* <strong>query parameters</strong>
+			<strong>query parameters</strong>
+			* After indicating what you want, you can indicate how you want it shown to you
+			* Further specifies the charactersitcs of what you ware looking for
+			* Again, terms are informed by convention rather than a rule
 
-
-		[https://api.thecatapi.com/v1/images/search]() <strong>[?category_ids=5&format=src]()</strong>
+			Example: https://api.thecatapi.com/v1/images/search?category_ids=5&format=src
 </textarea>
 		</section>
 		<section data-markdown>
