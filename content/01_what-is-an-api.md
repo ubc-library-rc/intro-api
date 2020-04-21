@@ -15,12 +15,14 @@ An API can give you access to the services or data available from another softwa
 ## Why use APIs?
 APIs are often used by software developers to enhance their own projects. Instead of building everything from scratch developers can use APIs to take advantage of services offered by other applications. For example, the Google Maps API makes it relatively easy to incorporate an interactive map into your project - there's no need to create your own.
 
+#### Example: Google Map API
 <iframe width="400" height="300" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/view?zoom=11&center=49.2827,-123.1207&key=AIzaSyDYl5y6Sq0XKodDmTDWuKV1VYMLcMmT_QM" allowfullscreen></iframe>
+Source: <a href="https://developers.google.com/maps/documentation/embed/start" target="_blank">Google Maps Embed API</a>_
 
-But you don't need to be a developer to benefit from APIs. They're also useful for extracting data from web services in a structured format. Take Google Analytics as an example. The Google Analytics website provides several dashboards designed to answer the most common questions about website activity. This is often helpful, but it can be frustrating when you need the data packaged differently than the website allows for. That's where an API can often help: using the Google Analytics API you can request the underlying data in a flexible format - usually JSON or XML - then use your own tools to explore or package it the way you need to.
+You don't need to be a developer to benefit from APIs: They're also useful for extracting data from web services in a structured format. Take Google Analytics as an example. The Google Analytics website provides several dashboards designed to answer the most common questions about website activity. This is often helpful, but it can be frustrating when you need the data packaged differently than the website allows for. That's where an API can help: using the Google Analytics API you can request the underlying data in a flexible format - usually JSON or XML - then use your own tools to explore or package it the way you need to.
 
-From the service provider side of things, APIs provide a way to control and monitor access to their resources. As we'll see a bit later, APIs often require you authenticate with an _API key_.
+For the service provider, APIs provide a way to control and monitor access to their resources
 
 ##  The restaurant metaphor: API as waiter
 
@@ -38,7 +40,7 @@ There are many kinds of APIs. In this workshop we focus on RESTful APIs, where t
 **REST** stands for "Representational State Transfer," referring to an architecture common in web APIs. In RESTful APIs, calls are sent through a browser and the details of each request are embedded in the URL.
 {: .note}
 
-The REST architecture expects there to be a "__server__" and a "__client__". The server is where the data lives and the client is what makes the API call to the server. Communication can go both ways but generally writing data to a server is more restricted than getting data from a server.
+The REST architecture expects there to be a __server__ and a __client__. The server is where the data lives and the client is what makes the API call to the server. Communication can go both ways but generally writing data to a server is more restricted than getting data from a server.
 
 ## Authentication and API keys
 Generally an API is doing two things:

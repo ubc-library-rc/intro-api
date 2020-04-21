@@ -18,6 +18,8 @@ __Quick reads:__
 * [UBC Library Open Collections API](https://open.library.ubc.ca/docs)
 * [Numbers API](http://numbersapi.com)
 * [The Cat API](https://thecatapi.com/)
+* [Google APIs Explorer](https://developers.google.com/apis-explorer)
+* [Nasa APIs](https://api.nasa.gov/)
 
 ## Tools mentioned in this workshop
 

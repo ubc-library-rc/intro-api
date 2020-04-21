@@ -28,77 +28,60 @@
 
         <section>
           <h2>What is an API?</h2>
+          <span class="fragment">
+            <b>A</b>pplication <b>P</b>rogramming <b>I</b>nterface
+          </span>
         </section>
 
 
-				<section data-background="#e6f7ff">
-					<h3>A way to extract information from websites</h3>
-					<p class="fragment">
-					Acquire non-tabular or poorly structured data from a site and convert it to a structured format (.csv, spreadsheet)
-					</p>
+				<section>
+				  A structured way for software applications to communicate with each other
+				</section>
+
+        <section data-background="#e6f7ff">
+          <h3>Why use APIs?</h3>
+          <section>
+          <p>Enhance your projects with services and data provided by other applications</p>
+          <div class="fragment fade-in-then-out" style="position:relative">
+            <iframe width="600" height="300" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/view?zoom=11&center=49.2827,-123.1207&key=AIzaSyDYl5y6Sq0XKodDmTDWuKV1VYMLcMmT_QM"></iframe>
+
+              <p style="font-size:0.7em">Source: <a href="https://developers.google.com/maps/documentation/embed/start" target="_blank">Google Maps Embed API</a></p>
+          </div>
+          <div class="fragment fade-in-then-out" style="position:absolute; top:35%;">
+            <iframe style="background-color: white;" width=70% height="300"  src="https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0"></iframe><ul>
+            <p style="font-size:0.7em">Source: <a href="hhttps://api.nasa.gov/#insight" target="_blank">Insight: Mars Weather Service API (NASA)</a></p>
+          </div>
+					<div class="fragment fade-in" style="position:absolute; top: 35%; left:5%">
+						Control and monitor access to your resources
+					</div>
+          </section>
 				</section>
 
 				<section>
+					<p><b>The restaurant metaphor</b></p>
+					<p style="font-size:0.9em">The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server).</p>
+					<p class="fragment" style="font-size:0.9em; padding-top: 50px">You don't need to know how the kitchen or the restaurant operates, you just need to know how to order.</p>
+					<p style="font-size:0.6em; padding-top: 120px">Andrew Park, <a href="https://tray.io/blog/how-do-apis-work">What are APIs and how do they work?</a>
+				</section>
 
-					<img width="550" height="230" data-src="../content/media/the_general_problem.png" alt="The promise of automation">
-					<p style="font-size: smaller;">Source: <a href="https://xkcd.com/974/">https://xkcd.com/974/</a></p>
+				<section>
+					<p><b>RESTful API</b>: A type of API where the communication happens via HTTP, often using a browser</p>
+					<div class="fragment" style="line-height:0.7em">
+					<code style="font-size:0.7em;">https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0</code>
+				</div>
+					<iframe class="fragment" style="background-color: white; border:1px solid lightgrey;margin-top:30px" width=70% height="300"  src="https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0"></iframe>
+
 				</section>
 
 				<section data-background="#e6f7ff">
-					<h3>Automate web data retrieval</h3>
+					<h3>Authentication</h3>
 					<ul>
-						<li class="fragment fade-in-then-semi-out">identify sites to visit</li>
-						<li class="fragment fade-in-then-semi-out">define information to look for</li><li class="fragment fade-in-then-semi-out">set how far to go</li>
-						<li class="fragment fade-in-then-semi-out">set scraping frequency</li>
-				</ul>
-			</section>
-
-				<section>
-					<h3> Scraping vs crawling</h3>
-					<p class="fragment"><b>Crawling</b>. What Google does to index the web - systematically "crawling" through all content on specified sites.</p>
-					<p class="fragment"><b>Scraping</b>. More targeted than crawling - identifies and extracts specific content from pages it accesses.</p>
-
-				</section>
-
-				<section>
-					<p>Some sites disallow web scraping with a robots.txt file.</p>
-					<img width="600" height="219" data-src="../content/media/robotstxt.png" alt="robots.txt comic">
-					<p style="font-size: smaller;">Source: <a href="http://locomostrip.com/comic/179/">http://locomostrip.com/comic/179/</a></p>
-				</section>
-
-				<section data-background="#e6f7ff">
-					<h3>Is scraping the best option?</h3>
-					<ul class="fragment">
-						<li>is it easy to copy/paste?</li>
-						<li>does the site provide an export option?</li>
-						<li>is there an API?</li>
+						<li>Public API key
+						<li>Registered API key
 					</ul>
 
 				</section>
-
-				<section>
-					<h3>Ethics and considerations</h3>
-				</section>
-				<section>
-						<p>Am I allowed to take this data?</p>
-						<p class="fragment" style="color:grey">Check the website for <em>terms of use</em> that affect web scraping.</p>
-					</section>
-					<section>
-						<p>Are there restrictions on what I can do with this data?</p>
-						<p class="fragment" style="color:grey">Making a local copy of publicly available data is usually OK, but there may be limits on use and redistribution (check for <em>copyright</em> statements).</p>
-					</section>
-					<section>
-
-						<p>Am I overloading the website's servers?</p>
-					<p class="fragment" style="color:grey">Scraping practice should respect the website's access rules, often encoded in <em>robots.txt</em> files.</p>
-				</section>
-						<section data-background="#e6f7ff">
-						<p>When in doubt ask a librarian or contact UBC's Copyright Office<br/><a href="https://copyright.ubc.ca/support/contact-us/">https://copyright.ubc.ca/support/contact-us/</a></p>
-
-				</section>
-
-
-
 
 			</div>
 		</div>
@@ -110,6 +93,11 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: 'none', // none/fade/slide/convex/concave/zoom
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
