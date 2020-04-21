@@ -7,6 +7,8 @@
 
 ## Structure of a Query
 
+<em><a href="../slides/working-with-apis.html" target="_blank">View slides</a> for this section</em>
+
 A query has a few core components:
 * __endpoint__
 * __path__
