@@ -9,11 +9,10 @@ has_toc: false
 Active participation enlivens the session with other voices and perspectives. We encourage you to engage with instructors and with each other.
 
 Microphones are muted by default to improve audio quality and recording is disabled to preserve participant privacy.
-{: .note}
 
-The Zoom toolbar provides several ways to be part of the conversation.
+The Zoom toolbar provides several ways to be part of the conversation:
 
-![Zoom toolbar](figures/zoom_toolbar.png)
+<img src="figures/zoom_toolbar.png" alt="Zoom toolbar" width="510"/>
 
 ### _Participants_ window
 The _Participants_ window lists everyone in the session. Click the icons at the bottom of the window to communicate with the instructors.
