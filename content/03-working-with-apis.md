@@ -18,11 +18,7 @@ Every API has an __endpoint__ which is like providing an address to the server. 
 
 The __path__ tells the server which data you are most interested in and __query parameters__ are a way to further specify what you want. Query parameters are not a part of the REST architecture but are commonly used.
 
-If you want to further specify what you want to get out of the API, __Query parameters__ are added on using this structure:
-
-The symbol "?" indicates the end of the path and the beginning of the __query parameters__.
-
-A path doesn't have to lead to only one thing. It's also possible to batch your requests by indicating that you are interested in more than one path. For the Numbers API this means you might be interested in facts about multiple numbers.
+A query doesn't have to lead to only one thing. It's also possible to batch your requests by indicating that you are interested in more than one piece of data. For the Numbers API this means you might be interested in facts about multiple numbers.
 
 This is just the tip of the iceberg! A lot more is possible with APIs and we will touch on next steps through our activities.
 
