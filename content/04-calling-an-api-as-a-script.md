@@ -4,6 +4,9 @@
  parent: Outline
  nav_order: 4
 ---
+
+<em><a href="../slides/getting-started.html" target="_blank">View slides</a> for this section</em>
+
 # Calling an API with a script
 The examples we have touched on so far are fairly simple. Often when working with APIs we want to be able to get targeted information quickly and the most effective way to do this is through the use of additional tools like a script.
 
