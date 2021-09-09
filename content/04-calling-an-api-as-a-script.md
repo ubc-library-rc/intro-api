@@ -49,14 +49,14 @@ We are also going to follow the instructions in the [Open Collections documentat
 3. The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). The script is included below but you can also take a look at it in [Github here](https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py).
 
 
-This script was originally written by Sean McNamara @Seanmcn for the UBC Library.
+This script was originally written by Sean McNamara @Seanmcn for the UBC Library and updated by Schuyler Lindberg.
 
 ~~~ python
 import requests, math, json
 
 ocApiUrl = 'https://oc-index.library.ubc.ca'
-apiKey = 'ac40e6c2cb345593ed1691e0a8b601bba398e42d85f81f893c5ab709cec63c6c'
-collection = 'darwin'
+apiKey = '' # your api key here between the quotes
+collection = 'florence'
 perPage = 25
 offset = 0
 
@@ -64,9 +64,11 @@ offset = 0
 collectionUrl = ocApiUrl + '/collections/' + collection + '?api_key=' + apiKey
 apiResponse = requests.get(collectionUrl).json()
 itemCount = float(apiResponse['data']['items'])
+print(itemCount)
 
 # Figure out how many pages there are
 pages = int(math.ceil(itemCount / float(perPage)))
+print(pages)
 
 # Loop through collection item pages to get all items
 itemIds = []
@@ -74,9 +76,11 @@ for x in range(0, pages):
     collectionItemsUrl = ocApiUrl + '/collections/' + collection
     collectionItemsUrl += '/items?limit=' + str(perPage) + '&offset=' + str(offset) + '&api_key=' + apiKey
     offset += 25
+    print(collectionItemsUrl)
     # Get list of 25 items
     apiResponse = requests.get(collectionItemsUrl).json()
     collectionItems = apiResponse['data']
+    # print(collectionItems)
     # Add each item id to the itemIds list
     for collectionItem in collectionItems:
         itemIds.append(collectionItem['_id'])
@@ -84,9 +88,14 @@ for x in range(0, pages):
 # Store all the items so we can print them out later
 items = []
 for itemId in itemIds:
-    itemUrl = ocApiUrl + '/collections/' + collection + '/items/' + itemId
+    itemUrl = ocApiUrl + '/collections/' + collection + '/items/' + itemId + '?api_key=' + apiKey
     apiResponse = requests.get(itemUrl).json()
     item = apiResponse['data']
+    # print(itemUrl)
+    # print(item)
+    if item == 'null':
+        print('NULL!!')
+
     items.append(item)
 
 print(json.dumps(items))
