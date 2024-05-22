@@ -44,7 +44,7 @@ We are also going to follow the instructions in the [Open Collections documentat
 
 1. Please log in to [UBC Syzygy here](https://ubc.syzygy.ca/). Click on the red house and log in via UBC CWL.
 ![Log in to Syzygy](syzygy-login.png)
-2. Select Python 3 under notebooks.
+2. Select Python 3 under Notebook.
 ![Select Python 3 for new Jupyter notebook](syzygy-python3.png)
 3. The Open Collections documentation has several open scripts for you to experiment with. We will be using the Python version of the script that retrieves a list of all of the items in a collection and their metadata (descriptive information about them). The script is included below but you can also take a look at it in [Github here](https://github.com/ubc-library/docs-open-collections-api/blob/master/scripts/all_items_from_a_collection/all_items_from_a_collection.py).
 
