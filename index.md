@@ -2,8 +2,6 @@
 layout: default
 nav_order: 1
 title: Outline
-has_children: true
-has_toc: false
 ---
 # Introduction to APIs
 
