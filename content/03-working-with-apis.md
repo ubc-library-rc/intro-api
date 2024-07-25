@@ -1,8 +1,7 @@
 ---
  layout: default
  title: Working with APIs
- parent: Outline
- nav_order: 3
+ nav_order: 5
 ---
 
 ## Structure of a Query
