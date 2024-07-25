@@ -1,8 +1,7 @@
 ---
  layout: default
  title: Calling an API with a script
- parent: Outline
- nav_order: 4
+ nav_order: 6
 ---
 
 <em><a href="../slides/getting-started.html" target="_blank">View slides</a> for this section</em>
