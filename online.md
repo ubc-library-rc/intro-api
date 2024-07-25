@@ -14,12 +14,12 @@ The Zoom toolbar provides several ways to be part of the conversation:
 
 <img src="figures/zoom_toolbar.png" alt="Zoom toolbar" width="510"/>
 <br/>
-## Participants window
-The _Participants_ window lists everyone in the session. Click the icons at the bottom of the window to communicate with the instructors.
+## Reactions menu 
+Open the _Reactions_ menu and click an icon to communicate with the instructors.
 
-![Menu at bottom of participants window](figures/participants_window_menu.png)
+![Reactions menu](figures/reactions.png)
 
-Clicking an icon makes it appear next to your name in the participants list. Use this to **answer yes/no** questions or to **raise your hand** when instructors invite you to ask a question, comment, or share your screen.
+Use this to **answer yes/no** questions or to **raise your hand** when instructors invite you to ask a question, comment, or share your screen.
 <br/>
 ## Chat window
 Use the _Chat_ window to comment or ask a question at any time. Instructors will do their best to respond, sometimes waiting for a break in the lesson to do so.
