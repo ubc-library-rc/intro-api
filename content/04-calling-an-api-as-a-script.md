@@ -11,7 +11,7 @@
 The examples we have touched on so far are fairly simple. Often when working with APIs we want to be able to get targeted information quickly and the most effective way to do this is through the use of additional tools like a script.
 
 ## Querying the Open Collections API
-The UBC Library's [Open Collections](https://open.library.ubc.ca/) has a robust open API which anyone can use though you do need to register an email address in order to make large or more involved requests.
+The UBC Library's [Open Collections](https://open.library.ubc.ca/) has a open API which anyone can use though you do need to register an email address in order to make large or more involved requests.
 
 Detailed documentation about the API is [available here](https://open.library.ubc.ca/docs).
 
