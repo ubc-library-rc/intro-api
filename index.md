@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_order: 4
+nav_order: 1
 title: Outline
 has_children: true
 has_toc: false
