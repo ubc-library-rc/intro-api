@@ -44,6 +44,23 @@ Output
 
 To view the image, copy the URL portion of the JSON string into the address bar, then hit _enter_.
 
+> [!NOTE]  
+> JSON stands for **J**ava**S**cript **O**bject **N**otation. It is a lightweight format for storing and transporting data. JSON is described as ‘self-describing’ and is super easy to understand. JSON data is written as name/value pairs. The name/value pair consists of a field name in double quotes, followed by a colon, followed by a value. 
+
+> In our cat example, it might be easier to grasp if we presented in JSON format: 
+
+>```
+>[
+>  {
+>    "id": "iRMmnkFTl",
+>    "url": "https://cdn2.thecatapi.com/images/iRMmnkFTl.png",
+>    "width": 1100,
+>    "height": 739
+>  }
+>]
+>```
+
+
 ### Getting specific: query parameters
 That's quite a bit of work for one random cat image but we can refine results with query parameters. Add a `?` to the end of the URL followed by one or more parameters in the format shown below. Note that each parameter is separated by a `&`.
 
