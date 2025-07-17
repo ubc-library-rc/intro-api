@@ -100,7 +100,7 @@ for itemId in itemIds:
 print(json.dumps(items))
 ~~~
 
-4. Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook. Add your API key or the public API key to the apiKey line. 
+4. Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook. Add your [API key](https://open.library.ubc.ca/docs#api-keys) or the [public API key](https://open.library.ubc.ca/docs#api-keys) to the apiKey line. 
 ![Paste script into Jupyter](paste-into-jupyter.png)
 Run the script.
 ![Run in Jupyter](run-jupyter.png)
