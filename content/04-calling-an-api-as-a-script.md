@@ -100,15 +100,15 @@ for itemId in itemIds:
 print(json.dumps(items))
 ~~~
 
-4. Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook,
+4. Copy the script as it currently is and paste it into the dialog box in your new Jupyter notebook. Add you API key or the public API key to the apiKey line. 
 ![Paste script into Jupyter](paste-into-jupyter.png)
-and run the script.
+Run the script.
 ![Run in Jupyter](run-jupyter.png)
 
-5. After a few moments you will see the output of your API call in the Jupyter notebook. At this stage your output is in JSON format.
+6. After a few moments you will see the output of your API call in the Jupyter notebook. At this stage your output is in JSON format.
 ![Jupyter output](output-in-jupyter.png). As a final step, let's turn this into tabular data through Open Refine.
 
-6. Select all of our JSON output in the Jupyter notebook. A quick way to do this for a small amount of data is to select the beginning of our output, hold "Shift" and then select the end. CMD+C or CTRL+C to copy. Open OpenRefine and paste your copied output into the OpenRefine "clipboard" input.
+7. Select all of our JSON output in the Jupyter notebook. A quick way to do this for a small amount of data is to select the beginning of our output, hold "Shift" and then select the end. CMD+C or CTRL+C to copy. Open OpenRefine and paste your copied output into the OpenRefine "clipboard" input.
 ![Paste into OpenRefine](paste-into-openrefine.png)
 
 After selecting "Next" OpenRefine will ask you to explain the data to it a bit. For this exercise you need to tell it where the data begins that you want to see in a tabular format.
